@@ -1,17 +1,4 @@
-# Tridev
-
-![tridev](assets/tridev.jpeg)
-
-> Three principal deities in Hinduism is known as the Trimurti,“त्रिमूर्ति”
-> Each component of the term is broken down as follows:
-> त्रि (tri) - meaning “three”
-> मूर्ति (murti) - meaning “form” or “manifestation”
-> Together, “Trimurti” (Tridev) signifies the three forms or manifestations,
-> referring to in Hindu theology as Brahma (the Source/Creator), Vishnu
-> (the Preserver/Indwelling-life) and Shiva (the Transformer Destroyer/Creator).
-
-**Tridev** is a GitOps utility that creates ephemeral environments based on manifests
-in this repository.
+# Getting Started
 
 ## Configuration
 
@@ -61,34 +48,27 @@ The rest of the `tridev` configuration is presented below:
 ## values: | # optional override values file as a string.
 ##     example:
 ##       replicas: 2
-## remoteValues: []  # list of remote values files as a URL
-releases: []
-```
+## remote
 
-Upon merging into `dev` the above `tridev` manifest will be converted into individual
-Argo `application` manifests under the `argo` directory (folder will be named by
-the same as your environment, i.e. `tridev` file name).  The default branch for
-the Argo files will be [deploy](https://github.com/dexcom-inc/platform-toolbox/tree/deploy).
-This branch has few protections and the generated Argo files can be updated at will,
-though keep in mind that changes made directly in that branch aren't guaranteed
-to be preserved.
+## Building your first Tridev environment
 
-A GKE cluster will likewise be created, again named after the specified `env` and
-each release will be deployed to that cluster.
+To build your first environment it is recommended to grab an existing environment
+for reference.  The Cloud Engineering team typically has an environment with most
+of the Kuberenetes add-ons, e.g., `external-dns`, `nginx-ingress`, etc., preconfigured
+and this file can be referenced to start.
 
-Subsequent updates can be made to the `tridev` manifest and these will likewise
-be pushed to the GKE cluster though no additional cluster will be created.
+- Step 1: Inside the `tridev` folder on the `dev` branch create/copy a new `yaml`
+  file.  Whatever you name the file will be the name of the environment and
+  cluster.
 
-## Getting Started
+- Step 2: Add any Helm chart releases to the file under the `releases` section.
+  See [Configuation](#configuration) for full instructions, but minimally you'll
+  need a chart name and version.  By default Tridev will pull from
+  `dexcom.jfrog.io/dexcom-helm-dev-virtual`, but this can be overriden by
+  supplying a `repo` override.
 
-There's a sample demo environment provided in the `tridev` directory.  The demo
-includes many of the base tooling most clusters need including:
-
-- Nginx Ingress
-- Cert Manager
-- External DNS
-
-Copy this file and give it a unique name for your environment.  Create a PR and,
-upon merge, the Github Action will run to generate a new cluster in the
-[platform-cloud-engineering](https://console.cloud.google.com/kubernetes/list/overview?project=platform-cloud-engineering)
-project.
+  ```yaml
+  releases:
+    - name: my-chart
+      version: 1.0.1
+  ```

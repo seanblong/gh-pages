@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /helm/
 ---
 
 # Building a Helm Chart

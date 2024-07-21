@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Tip and Tricks
-permalink: /helm/
 ---
 
 # Tips and Tricks

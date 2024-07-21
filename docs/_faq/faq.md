@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Frequently Asked Questions
-permalink: /faq/
 ---
 
 ## How do I document my chart in order to auto-generate READMEs

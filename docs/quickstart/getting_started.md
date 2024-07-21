@@ -1,3 +1,8 @@
+---
+layout: page
+---
+
+
 # Getting Started
 
 ## Configuration

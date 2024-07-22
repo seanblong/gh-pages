@@ -51,6 +51,7 @@ The rest of the `tridev` configuration is presented below:
 ## remote
 
 ## Building your first Tridev environment
+```
 
 To build your first environment it is recommended to grab an existing environment
 for reference.  The Cloud Engineering team typically has an environment with most

@@ -16,4 +16,3 @@ jobs:
         working-directory: docs
       - name: Publish documentation to gh-pages branch
         run: mkdocs gh-deploy --force
-        working-directory: docs

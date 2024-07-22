@@ -1,7 +1,8 @@
 site_name: Tridev
 theme:
   name: material
-logo: docs/assets/lakitu.svg
+logo: assets/lakitu.svg
+favicon: assets/lakitu.svg
 repo_url: https://github.com/dexcom-inc/platform-toolbox
 repo_name: dexcom-inc/platform-toolbox
 edit_uri: edit/main/docs/docs/

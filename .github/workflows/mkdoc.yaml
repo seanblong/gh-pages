@@ -13,6 +13,7 @@ jobs:
           python-version: 3.x
       - name: Install mkdocs requirements
         run: pip install -r requirements.txt
-        working-directory: docs
+        working-directory: tridev/docs
       - name: Publish documentation to gh-pages branch
         run: mkdocs gh-deploy --force
+        working-directory: tridev

@@ -1,7 +1,3 @@
----
-layout: page
----
-
 # Building a Helm Chart
 
 ## Getting Started

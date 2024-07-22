@@ -1,0 +1,19 @@
+site_name: Tridev
+theme:
+  name: material
+repo_url: https://github.com/dexcom-inc/platform-toolbox
+repo_name: dexcom-inc/platform-toolbox
+edit_uri: edit/main/docs/docs/
+plugins:
+  - search
+  - mermaid2
+  - awesome-pages
+markdown_extensions:
+  - admonition
+nav:
+  - Home: README.md
+  - Quickstart: quickstart/quickstart.md
+  - Helm:
+    - Building a Helm Chart: helm/building-helm-chart.md
+    - Tips and Tricks: helm/tips-and-tricks.md
+  - FAQ: faq/faq.md

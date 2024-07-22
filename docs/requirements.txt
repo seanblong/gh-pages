@@ -1,0 +1,5 @@
+# Used by the mkdocs GH Action
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-mermaid2-plugin

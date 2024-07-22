@@ -3,6 +3,8 @@ theme:
   name: material
   logo: assets/lakitu.svg
   favicon: assets/lakitu.svg
+  palette:
+    primary: coral
 repo_url: https://github.com/dexcom-inc/platform-toolbox
 repo_name: dexcom-inc/platform-toolbox
 edit_uri: edit/main/docs/docs/

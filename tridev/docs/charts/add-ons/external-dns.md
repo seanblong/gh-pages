@@ -1,1 +1,0 @@
-../../../charts/external-dns/README.md

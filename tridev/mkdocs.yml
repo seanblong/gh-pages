@@ -24,4 +24,5 @@ nav:
     - Tips and Tricks: helm/tips-and-tricks.md
   - FAQ: faq/faq.md
   - Charts:
-    - cloudeng-deployment: charts/cloudeng-deployment.md
+    - Platform Templates:
+      - cloudeng-deployment: charts/cloudeng-deployment.md
